@@ -1,4 +1,4 @@
-apl
+apln
 ===
 
 Appland CLI tool

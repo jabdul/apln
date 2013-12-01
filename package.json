@@ -1,10 +1,10 @@
 {
-  "name": "apl",
+  "name": "apln",
   "version": "0.1.0",
   "description": "CLI tool for Appland. A UI development framework. ",
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "grunt" /* grunt nodeunit */
+    "test": "grunt"
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,20 @@
     "test"
   ],
   "bin": {
-    "apl": "bin/apl"
+    "apl": "bin/apln"
   },
   "author": "James Abdul",
   "license": "BSD",
   "gitHead": "82ecd3add51db4ad42a72062a6a22228c9d556e8",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "nopt": "",
+    "lodash": "",
+    "insight": "",
+    "sudo-block": "",
+    "async": "",
+    "open": "",
+    "chalk": ""
+  },
+  "devDependencies": {}
 }
