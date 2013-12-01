@@ -1,6 +1,6 @@
 {
   "name": "apln",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CLI tool for Appland. A UI development framework. ",
   "main": "Gruntfile.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jabdul/apl.git"
+    "url": "git://github.com/jabdul/apln.git"
   },
   "keywords": [
     "scaffold",
@@ -25,13 +25,13 @@
   "gitHead": "82ecd3add51db4ad42a72062a6a22228c9d556e8",
   "readmeFilename": "README.md",
   "dependencies": {
-    "nopt": "",
-    "lodash": "",
-    "insight": "",
-    "sudo-block": "",
-    "async": "",
-    "open": "",
-    "chalk": ""
+    "nopt": "~2.1.2",
+    "lodash": "~2.4.0",
+    "insight": "~0.3.0",
+    "sudo-block": "~0.3.0",
+    "async": "~0.2.9",
+    "open": "0.0.4",
+    "chalk": "~0.3.0"
   },
   "devDependencies": {}
 }
