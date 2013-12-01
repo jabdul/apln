@@ -1,0 +1,27 @@
+{
+  "name": "apl",
+  "version": "0.1.0",
+  "description": "CLI tool for Appland. A UI development framework. ",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt" /* grunt nodeunit */
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jabdul/apl.git"
+  },
+  "keywords": [
+    "scaffold",
+    "UI",
+    "Appland",
+    "build",
+    "test"
+  ],
+  "bin": {
+    "apl": "bin/apl"
+  },
+  "author": "James Abdul",
+  "license": "BSD",
+  "gitHead": "82ecd3add51db4ad42a72062a6a22228c9d556e8",
+  "readmeFilename": "README.md"
+}
