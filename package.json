@@ -34,6 +34,6 @@
     "chalk": "~0.3.0"
   },
   "devDependencies": {
-    "jasmine-node": ""
+    "jasmine-node": "~1.11.0"
   }
 }
