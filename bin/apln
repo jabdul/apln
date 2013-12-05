@@ -1,2 +1,8 @@
 #!/usr/bin/env node
 'use strict';
+
+var args = process.argv.slice(0);
+// shift off node and script name
+args.shift(); args.shift();
+
+console.log(args);
