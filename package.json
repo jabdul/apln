@@ -31,7 +31,8 @@
     "sudo-block": "~0.3.0",
     "async": "~0.2.9",
     "open": "0.0.4",
-    "chalk": "~0.3.0"
+    "chalk": "~0.3.0",
+    "optimist": "~0.6.0"
   },
   "devDependencies": {
     "jasmine-node": "~1.11.0"
