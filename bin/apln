@@ -6,11 +6,14 @@
  * @type {*}
  */
 var cli = require('../lib/cli'),
-    argv = require('optimist').argv;
+    argv = require('optimist')
+            //.usage('Usage: $0 -c [string]')
+            //.demand(['c'])
+            .argv;
 
 // shift off node and script name
 //args.shift(); args.shift();
 
 // run the command line client
+console.log(cli);
 cli.argv(argv);
-console.log(argv);

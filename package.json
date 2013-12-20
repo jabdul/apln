@@ -4,7 +4,7 @@
   "description": "CLI tool for Appland. A UI development framework.",
   "main": "bin/apln",
   "scripts": {
-    "test": "jasmine-node spec"
+    "test": "jasmine-node --color --verbose spec"
   },
   "repository": {
     "type": "git",

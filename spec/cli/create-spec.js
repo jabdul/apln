@@ -9,7 +9,12 @@ var cli = require('../../lib/cli'),
  * Specification: $ apln create <module-name>
  */
 describe('$ apln create <module-name>', function(){
-  it('should create the module', function() {
+  beforeEach(function() {
+    spyOn(apln, 'create');
+  });
 
+  it('should create the module', function() {
+    cli.argv({_: ['create','my-app']});
+    expect(apln.create).toHaveBeenCalledWith('my-app');
   });
 });

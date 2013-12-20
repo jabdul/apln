@@ -1,0 +1,14 @@
+Usage: apln [options] [commands]
+
+Description:
+
+  apln - Appland's command-line tool.
+
+Commands:
+
+  c <module-name>		create a module
+
+Options:
+
+  -v, --version			output version number
+  -h, --help			  output usage information
