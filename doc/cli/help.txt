@@ -6,9 +6,9 @@ Description:
 
 Commands:
 
-  c <module-name>		create a module
+  c <module-name>   create a module
 
 Options:
 
-  -v, --version			output version number
-  -h, --help			  output usage information
+  -v, --version     output version number
+  -h, --help        output usage information
