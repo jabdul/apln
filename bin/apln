@@ -3,7 +3,6 @@
 
 /**
  * Module Dependencies
- * @type {*}
  */
 var cli = require('../lib/cli'),
     argv = require('optimist')
@@ -15,5 +14,5 @@ var cli = require('../lib/cli'),
 //args.shift(); args.shift();
 
 // run the command line client
-console.log(cli);
+console.log(argv);
 cli.argv(argv);
