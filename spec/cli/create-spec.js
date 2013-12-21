@@ -11,13 +11,12 @@ var cli = require('../../lib/cli'),
 describe('$ apln create <module-name>', function(){
   var that = this;
   beforeEach(function() {
-    that.Create = new apln.create();
-    spyOn(that.Create, 'init');
+    spyOn(apln.create, 'init');
   });
 
   it('should create the module', function() {
     cli.argv({_: ['create','my-app']});
-    //expect(that.Create.init).toHaveBeenCalledWith('my-app');
-    expect(that.Create.tag).toBe('creator');
+    expect(apln.create.init).toHaveBeenCalledWith('my-app');
+    expect(apln.create.tag).toBe('creator');
   });
 });
