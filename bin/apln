@@ -6,8 +6,17 @@
  */
 var cli = require('../lib/cli'),
     argv = require('optimist')
-            //.usage('Usage: $0 -c [string]')
-            //.demand(['c'])
+            .options(
+              'v', {
+                alias: 'verbose'
+              },
+              'q', {
+                alias: 'quiet'
+              },
+              'h', {
+                alias: 'help'
+              }
+            )
             .argv;
 
 // shift off node and script name
