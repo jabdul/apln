@@ -25,7 +25,6 @@
   "gitHead": "82ecd3add51db4ad42a72062a6a22228c9d556e8",
   "readmeFilename": "README.md",
   "dependencies": {
-    "nopt": "~2.1.2",
     "lodash": "~2.4.0",
     "insight": "~0.3.0",
     "sudo-block": "~0.3.0",
