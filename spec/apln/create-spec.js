@@ -12,7 +12,8 @@ describe('apln create class', function(){
   var that = this;
 
   that.moduleName = 'my-app';
-  that.prop = ['moduleName', 'nameSpace'];
+  that.nameSpace = 'comp-modA';
+  that.prop = ['moduleName', 'nameSpace', 'PATH_APPLAND_HOME'];
   beforeEach(function() {
   });
 
@@ -33,5 +34,23 @@ describe('apln create class', function(){
     expect(apln.create.validate(that.prop[0],'*')).toBe(false);
     expect(apln.create.validate(that.prop[0],'-my-app')).toBe(false);
     expect(apln.create.validate(that.prop[0],'')).toBe(false);
+  });
+
+  it("should validate module's namespace", function() {
+    expect(apln.create.validate(that.prop[1],that.nameSpace)).toBeTruthy();
+    expect(apln.create.validate(that.prop[1],'999')).toBeTruthy();
+    expect(apln.create.validate(that.prop[1],999)).toBeTruthy();
+    expect(apln.create.validate(that.prop[1],'x')).toBeTruthy();
+    expect(apln.create.validate(that.prop[1],'D6')).toBeTruthy();
+    expect(apln.create.validate(that.prop[1],'')).toBeFalsy();
+    expect(apln.create.validate(that.prop[1],'$')).toBeFalsy();
+    expect(apln.create.validate(that.prop[1],'2£')).toBeFalsy();
+  });
+
+  it("checks if Appland in installed", function() {
+    var truePath = "C:\\Users\\ABC\\Documents\\Tests\\Appland",
+        fakePath = "some/random/path";
+    expect(apln.create.validate(that.prop[2],truePath)).toBeTruthy();
+    expect(apln.create.validate(that.prop[2],fakePath)).toBeFalsy();
   });
 });
