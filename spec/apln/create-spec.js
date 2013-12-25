@@ -48,7 +48,7 @@ describe('apln create class', function(){
     expect(apln.create.validate(that.prop[1],'2£')).toBeFalsy();
   });
 
-  it("checks if Appland in installed", function() {
+  it("checks if Appland is installed", function() {
     var truePath = path.resolve(__dirname, '../fixtures/appland'),
         fakePath = "some/random/path";
     expect(apln.create.validate(that.prop[2],truePath)).toBeTruthy();
