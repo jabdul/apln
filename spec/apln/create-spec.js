@@ -38,20 +38,38 @@ describe('apln create class', function(){
   });
 
   it("should validate module's namespace", function() {
-    expect(apln.create.validate(that.prop[1],that.nameSpace)).toBeTruthy();
-    expect(apln.create.validate(that.prop[1],'999')).toBeTruthy();
-    expect(apln.create.validate(that.prop[1],999)).toBeTruthy();
-    expect(apln.create.validate(that.prop[1],'x')).toBeTruthy();
-    expect(apln.create.validate(that.prop[1],'D6')).toBeTruthy();
-    expect(apln.create.validate(that.prop[1],'')).toBeFalsy();
-    expect(apln.create.validate(that.prop[1],'$')).toBeFalsy();
-    expect(apln.create.validate(that.prop[1],'2£')).toBeFalsy();
+    expect(apln.create.validate(that.prop[1],that.nameSpace)).toBe(true);
+    expect(apln.create.validate(that.prop[1],'999')).toBe(true);
+    expect(apln.create.validate(that.prop[1],999)).toBe(true);
+    expect(apln.create.validate(that.prop[1],'x')).toBe(true);
+    expect(apln.create.validate(that.prop[1],'D6')).toBe(true);
+    expect(apln.create.validate(that.prop[1],'')).toBe(false);
+    expect(apln.create.validate(that.prop[1],'$')).toBe(false);
+    expect(apln.create.validate(that.prop[1],'2£')).toBe(false);
   });
 
   it("checks if Appland is installed", function() {
     var truePath = path.resolve(__dirname, '../fixtures/appland'),
         fakePath = "some/random/path";
-    expect(apln.create.validate(that.prop[2],truePath)).toBeTruthy();
-    expect(apln.create.validate(that.prop[2],fakePath)).toBeFalsy();
+    expect(apln.create.validate(that.prop[2],truePath)).toBe(true);
+    expect(apln.create.validate(that.prop[2],fakePath)).toBe(false);
+  });
+
+  it("checks scaffold source files exists", function() {
+    var scaffold = apln.create.scaffold;
+    expect(apln.create.isPath(scaffold.src)).toBe(true);
+    expect(apln.create.isPath(scaffold.srcTest)).toBe(true);
+    expect(apln.create.isPath(scaffold.sass)).toBe(true);
+    expect(apln.create.isPath(scaffold.build)).toBe(true);
+    expect(apln.create.isPath(scaffold.bogus)).toBe(false);
+  });
+
+  it("checks Appland's directory structure", function() {
+    var appland = path.resolve(__dirname, '../fixtures/appland'),
+        dirs = apln.create.appland;
+    expect(apln.create.isPath(path.resolve(appland, dirs.src))).toBe(true);
+    expect(apln.create.isPath(path.resolve(appland, dirs.srcTest))).toBe(true);
+    expect(apln.create.isPath(path.resolve(appland, dirs.sass))).toBe(true);
+    expect(apln.create.isPath(path.resolve(appland, dirs.build))).toBe(true);
   });
 });
