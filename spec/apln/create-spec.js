@@ -3,7 +3,8 @@
  * @type {*}
  */
 var cli = require('../../lib/cli'),
-    apln = require('../../lib/apln');
+    apln = require('../../lib/apln'),
+    path = require('path');
 
 /**
  * Specification: apln create class model
@@ -48,7 +49,7 @@ describe('apln create class', function(){
   });
 
   it("checks if Appland in installed", function() {
-    var truePath = "C:\\Users\\ABC\\Documents\\Tests\\Appland",
+    var truePath = path.resolve(__dirname, '../fixtures/appland'),
         fakePath = "some/random/path";
     expect(apln.create.validate(that.prop[2],truePath)).toBeTruthy();
     expect(apln.create.validate(that.prop[2],fakePath)).toBeFalsy();
