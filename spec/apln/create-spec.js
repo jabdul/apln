@@ -49,7 +49,7 @@ describe('apln create class', function(){
   });
 
   it("checks if Appland is installed", function() {
-    var truePath = path.resolve(__dirname, '../fixtures/appland'),
+    var truePath = path.resolve(__dirname, '../fixture/appland'),
         fakePath = "some/random/path";
     expect(apln.create.validate(that.prop[2],truePath)).toBe(true);
     expect(apln.create.validate(that.prop[2],fakePath)).toBe(false);
@@ -65,7 +65,7 @@ describe('apln create class', function(){
   });
 
   it("checks Appland's directory structure", function() {
-    var appland = path.resolve(__dirname, '../fixtures/appland'),
+    var appland = path.resolve(__dirname, '../fixture/appland'),
         dirs = apln.create.appland;
     expect(apln.create.isPath(path.resolve(appland, dirs.src))).toBe(true);
     expect(apln.create.isPath(path.resolve(appland, dirs.srcTest))).toBe(true);
