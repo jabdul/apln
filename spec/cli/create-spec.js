@@ -13,12 +13,12 @@ describe('$ apln create <module-name>', function(){
 
   that.moduleName = 'my-app';
   beforeEach(function() {
-    spyOn(apln.create, 'init');
+    spyOn(apln.Create, 'init');
   });
 
   it('should initialise the process', function() {
     cli.argv({_: ['create',that.moduleName]});
-    expect(apln.create.init).toHaveBeenCalledWith(that.moduleName);
-    expect(apln.create.moduleName).not.toBe(that.moduleName);
+    expect(apln.Create.init).toHaveBeenCalledWith(that.moduleName);
+    expect(apln.Create.moduleName).not.toBe(that.moduleName);
   });
 });
