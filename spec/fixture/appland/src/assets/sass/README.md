@@ -1,0 +1,1 @@
+Added for the purpose of saving empty directory to git.
