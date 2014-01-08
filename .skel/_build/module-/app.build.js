@@ -6,8 +6,8 @@
   keepBuildDir: false,                                   // Delete 'dir' before build
   optimize: "uglify",                                    // 'uglify','none'
   paths: {
-    'module-appland/common': '../dist/module-{MODULE-NAME}/common',
-    'module-appland/controller/index-controller': '../dist/module-{MODULE-NAME}/controller/index-controller'
+    'module-{MODULE-NAME}/common': '../dist/module-{MODULE-NAME}/common',
+    'module-{MODULE-NAME}/controller/index-controller': '../dist/module-{MODULE-NAME}/controller/index-controller'
   },
   modules: [
     //First set up the common build layer.
