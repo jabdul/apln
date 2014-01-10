@@ -1,11 +1,9 @@
 define([
   'module-{MODULE-NAME}/app',
   'lib/requirejs/domReady!',
-  'lib/requirejs/hbs!module-{MODULE-NAME}/view/tmpl/navbar',
-  'lib/requirejs/hbs!module-{MODULE-NAME}/view/tmpl/jumbotron',
-  'lib/requirejs/hbs!module-{MODULE-NAME}/view/tmpl/content'
+  'lib/requirejs/hbs!module-{MODULE-NAME}/view/tmpl/welcome'
 ],
-function (App, Doc, NavBarTmpl, JumboTronTmpl, ContentTmpl) {
+function (App, Doc, welcomeTmpl) {
   function IndexController() {
     /**
      * App's DOM Container Element. 
@@ -15,7 +13,6 @@ function (App, Doc, NavBarTmpl, JumboTronTmpl, ContentTmpl) {
     /**
      * Script initialiser.
      * Executes a set of actions at start.
-     * @returns {undefined}
      */
     function init() {
       renderView();
@@ -23,29 +20,15 @@ function (App, Doc, NavBarTmpl, JumboTronTmpl, ContentTmpl) {
     }
     /**
      * Renders the view templates.
-     * @returns {undefined}
      */
     function renderView() {
-      var templates = [
-        NavBarTmpl(null),
-        JumboTronTmpl(null),
-        ContentTmpl(null)
-      ];
+      var templates = [welcomeTmpl(null)];
       appContainerEl.innerHTML = templates.join('\n');
     }
     /**
      * Event delegation.
-     * @returns {undefined}
      */
     function delegateEvents() {
-     /* $(Doc)
-        .on("click.apl.job",
-          '#wgsn-promo-intro-close', function (e) {
-          e.preventDefault();
-        })
-        .on("change.apl.job",
-          '#wgsn-promo-never-show-intro', function (e) {
-        });*/
     }
 
     var publicMethods = {
