@@ -13,7 +13,7 @@ function (App, Doc, AppConfig, ModuleConfig, Connect, Log4j) {
   // Setup logger
   // The getLogger string argument must be prefixed with Apl.Modules.
   ModuleConfig['module-{MODULE-NAME}'].Log =
-    Log4j.getLogger( 'Apl.Modules.{MODULE-NAMESPACE-CAMEL}' );
+    Log4j.getLogger( 'Apl.Modules.{MODULE-NAME-CAMEL}' );
   // Enable / disable logging
   App.setLogging({
       'setEnabled': AppConfig.App.Logging.setEnabled

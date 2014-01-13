@@ -4,7 +4,7 @@ require(['module.config.js'], function () {
     '../../src-test/module-{MODULE-NAME}/index'
   ], function (
       $,
-      module{MODULE-NAMESPACE-CAMEL}) {
+      module{MODULE-NAME-CAMEL}) {
 
     var jasmineEnv = jasmine.getEnv();
     jasmineEnv.updateInterval = 1000;
@@ -21,7 +21,7 @@ require(['module.config.js'], function () {
     var specs = [],
         TESTS_DIR = '../../src-test/',
         testSuites = [
-          module{MODULE-NAMESPACE-CAMEL}
+          module{MODULE-NAME-CAMEL}
         ];
 
     loadTestSuites(testSuites);

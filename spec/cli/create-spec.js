@@ -19,6 +19,6 @@ describe('$ apln create <module-name>', function(){
   it('should initialise the process', function() {
     cli.argv({_: ['create',that.moduleName]});
     expect(apln.Create.init).toHaveBeenCalledWith(that.moduleName);
-    expect(apln.Create.moduleName).not.toBe(that.moduleName);
+    expect(apln.Create.moduleName).toBe(that.moduleName);
   });
 });

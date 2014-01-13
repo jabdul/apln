@@ -19,16 +19,6 @@ describe('apln create command class', function(){
     spyOn(apln.Create, 'emit');
   });
 
-  xit('checks module name after initialisation', function() {
-    spyOn(apln.Create, 'init').andCallFake( function(prop, moduleName) {
-      this.moduleName = that.moduleName;
-      //return true;
-    });
-    apln.Create.init(that.moduleName);
-    expect(apln.Create.init).toHaveBeenCalledWith(that.moduleName);
-    expect(apln.Create.moduleName).toBe(that.moduleName);
-  });
-
   it('should validate module name', function() {
     expect(apln.Create.validate(that.prop[0],that.moduleName)).toBe(true);
     expect(apln.Create.validate(that.prop[0], 'm')).toBe(true);
@@ -81,7 +71,7 @@ describe('apln create command class', function(){
   });
 
   it("sets the namespace UpperCamelCase", function() {
-    apln.Create.setNameSpace(that.nameSpace);
-    expect(apln.Create.nameSpaceCamel).toBe('MyAppNs');
+    apln.Create.init(that.moduleName);
+    expect(apln.Create.moduleNameCamel).toBe('MyApp');
   });
 });
