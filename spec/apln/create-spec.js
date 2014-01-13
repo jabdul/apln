@@ -9,13 +9,14 @@ var cli = require('../../lib/cli'),
 /**
  * Specification: apln create class model
  */
-describe('apln create class', function(){
+describe('apln create command class', function(){
   var that = this;
 
   that.moduleName = 'my-app';
-  that.nameSpace = 'comp-modA';
+  that.nameSpace = 'my-app-ns';
   that.prop = ['moduleName', 'nameSpace', 'PATH_APPLAND_HOME'];
   beforeEach(function() {
+    spyOn(apln.Create, 'emit');
   });
 
   xit('checks module name after initialisation', function() {
@@ -71,5 +72,16 @@ describe('apln create class', function(){
     expect(apln.Create.isPath(path.resolve(appland, dirs.srcTest))).toBe(true);
     expect(apln.Create.isPath(path.resolve(appland, dirs.sass))).toBe(true);
     expect(apln.Create.isPath(path.resolve(appland, dirs.build))).toBe(true);
+  });
+
+  it("sets the namespace", function() {
+    spyOn(apln.Create, 'validate');
+    apln.Create.setNameSpace(that.nameSpace);
+    expect(apln.Create.validate).toHaveBeenCalled();
+  });
+
+  it("sets the namespace UpperCamelCase", function() {
+    apln.Create.setNameSpace(that.nameSpace);
+    expect(apln.Create.nameSpaceCamel).toBe('MyAppNs');
   });
 });
