@@ -11,6 +11,11 @@ function (App, Doc, welcomeTmpl) {
      */
     var appContainerEl = Doc.getElementById('{MODULE-NAMESPACE-PREFIX}-content');
     /**
+     * Module's configuration.
+     * @type {Object}
+     */
+    var moduleConfig = App.getModuleConfig('module-{MODULE-NAME}');
+    /**
      * Script initialiser.
      * Executes a set of actions at start.
      */
