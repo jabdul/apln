@@ -1,7 +1,7 @@
 define([
   'module-{MODULE-NAME}/app',
   'lib/requirejs/domReady!',
-  'lib/requirejs/hbs!module-{MODULE-NAME}/view/tmpl/welcome'
+  'hbs!module-{MODULE-NAME}/view/tmpl/welcome'
 ],
 function (App, Doc, welcomeTmpl) {
   function IndexController() {
