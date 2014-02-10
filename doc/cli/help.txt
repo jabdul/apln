@@ -6,9 +6,15 @@ Description:
 
 Commands:
 
-  c <module-name>   create a module
+  create <module-name>   create a module
+  remove <module-name>   remove a module
+  build <module-name>    build module
 
 Options:
 
-  -v, --version     output version number
-  -h, --help        output usage information
+  -h, --help        output usage information.
+  -v, --verbose     (default) display logs.
+  -q, --quiet       hide logging information.
+  -f, --force       force the application to continue the
+                    process regardless of errors.
+
