@@ -37,7 +37,6 @@
     "fs.extra": "~1.2.1"
   },
   "devDependencies": {
-    "jasmine-node": "~1.11.0",
-    "requirejs": "~2.1.10"
+    "jasmine-node": "~1.11.0"
   }
 }
