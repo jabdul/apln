@@ -15,13 +15,11 @@ var cli = require('../lib/cli'),
               },
               'h', {
                 alias: 'help'
+              },
+              'f', {
+                alias: 'force'
               }
             )
             .argv;
 
-// shift off node and script name
-//args.shift(); args.shift();
-
-// run the command line client
-//console.log(argv);
 cli.argv(argv);

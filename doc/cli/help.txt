@@ -16,5 +16,5 @@ Options:
   -v, --verbose     (default) display logs.
   -q, --quiet       hide logging information.
   -f, --force       force the application to continue the
-                    process regardless of errors.
+                    process regardless of warnings and handled errors.
 
