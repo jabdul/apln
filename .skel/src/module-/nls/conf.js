@@ -5,11 +5,10 @@ define({
       "name": "module-{MODULE-NAME}",
       "nameSpaces":['{MODULE-NAMESPACE-PREFIX}-'],
       "containerId": "{MODULE-NAMESPACE-PREFIX}-content",
-      "labels": [
-        {"LABEL_0": "WELCOME"},
-        {"LABEL_1": "close"}
-      ],
-      "pathToAssets": "../"
+      "labels": [{
+        "LABEL_0": "WELCOME",
+        "LABEL_1": "close"
+      }]
     }
   },
   "zh-cn": true
