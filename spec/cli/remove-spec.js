@@ -16,7 +16,7 @@ describe('$ apln remove <module-name>', function(){
     spyOn(apln.Remove, 'init');
   });
 
-  it('should initialise the process', function() {
+  it('should initialise the deletion process', function() {
     cli.argv({_: ['remove',that.moduleName]});
     expect(apln.Remove.init).toHaveBeenCalledWith(that.moduleName);
     expect(apln.Remove.moduleName).not.toBe(that.moduleName);

@@ -14,7 +14,7 @@ describe('$ apln <command> <value> <options>', function(){
 
   that.moduleName = 'my-app';
   that.nameSpace = 'my-app-ns';
-  that.commands = ['create', 'c', 'remove', 'r'];
+  that.commands = ['create', 'c', 'remove', 'r', 'build', 'b'];
   that.options = ['verbose', 'quiet', 'help'];
   that.appland = path.resolve(__dirname, '../fixture/appland');
   that.argv = {
@@ -22,7 +22,8 @@ describe('$ apln <command> <value> <options>', function(){
     '$0': that.appland,
     silent: undefined,
     verbose: true,
-    help: undefined
+    help: undefined,
+    force: true
   };
 
   beforeEach(function() {
