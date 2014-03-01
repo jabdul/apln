@@ -1,7 +1,7 @@
 apln
 ===
 
-apln is the command-line interface tool for Appland; en-to-end front-end development framework. It provides simple commands for creating the scaffold for your front-end project known as modules, as well as general development management.
+apln is the command-line interface tool for Appland; an end-to-end front-end development framework. It provides simple commands for creating the scaffold for your front-end project known as modules, as well as general development management.
 
 ## Documentation
 
