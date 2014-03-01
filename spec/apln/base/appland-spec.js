@@ -74,4 +74,17 @@ describe('apln base class model for commands', function(){
     apln.launch(that.launchPort);
     expect(apln.launch).toHaveBeenCalledWith(that.launchPort);
   });
+
+  it("can compile css", function() {
+    var callBack = function(){};
+    spyOn(apln, 'compileCss');
+    apln.compileCss(callBack);
+    expect(apln.compileCss).toHaveBeenCalledWith(callBack);
+  });
+
+  it("can continue process on error", function() {
+    apln.continueOnError = false;
+    apln.setContinueOnError(true);
+    expect(apln.continueOnError).toBe(true);
+  });
 });
