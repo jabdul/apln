@@ -15,6 +15,7 @@ describe('apln create command class', function(){
   that.moduleName = 'my-app';
   that.nameSpace = 'my-app-ns';
   that.prop = ['moduleName', 'nameSpace', 'PATH_APPLAND_HOME'];
+  that.launchPort = 9010;
 
   beforeEach(function() {
     spyOn(apln.Create, 'emit');
@@ -33,5 +34,9 @@ describe('apln create command class', function(){
     spyOn(apln.Create, 'validate');
     apln.Create.setNameSpace(that.nameSpace);
     expect(apln.Create.validate).toHaveBeenCalled();
+  });
+
+  it("has a default launcher browser url port", function() {
+    expect(apln.Create.launchPort).toEqual(that.launchPort);
   });
 });

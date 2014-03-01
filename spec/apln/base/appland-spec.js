@@ -14,6 +14,7 @@ describe('apln base class model for commands', function(){
   that.moduleName = 'my-app';
   that.nameSpace = 'my-app-ns';
   that.prop = ['moduleName', 'nameSpace', 'PATH_APPLAND_HOME'];
+  that.launchPort = 9010;
 
   beforeEach(function() {
     spyOn(apln, 'emit');
@@ -58,5 +59,19 @@ describe('apln base class model for commands', function(){
   it("sets the namespace UpperCamelCase", function() {
     apln.init(that.moduleName);
     expect(apln.moduleNameCamel).toBe('MyApp');
-  });/**/
+  });
+
+  it("has a default launcher browser", function() {
+    expect(apln.browser).toBe('chrome');
+  });
+
+  it("has a default launcher browser url port", function() {
+    expect(apln.launchPort).toEqual(that.launchPort);
+  });
+
+  it("has a launcher", function() {
+    spyOn(apln, 'launch');
+    apln.launch(that.launchPort);
+    expect(apln.launch).toHaveBeenCalledWith(that.launchPort);
+  });
 });
