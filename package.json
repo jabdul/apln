@@ -1,37 +1,59 @@
 {
   "name": "apln",
-  "version": "0.1.1",
-  "description": "CLI tool for Appland. A UI development framework. ",
-  "main": "Gruntfile.js",
+  "version": "0.2.0",
+  "description": "CLI tool for Appland. A UI development framework.",
   "scripts": {
-    "test": "grunt"
+    "test": "jasmine-node --color --verbose spec"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/jabdul/apln.git"
   },
+  "homepage": "http://appland.io",
   "keywords": [
     "scaffold",
     "UI",
+    "front-end",
     "Appland",
     "build",
-    "test"
+    "test",
+    "cli",
+    "stack",
+    "mock",
+    "compile",
+    "requirejs",
+    "AMD"
   ],
+  "main": "bin/apln",
   "bin": {
-    "apl": "bin/apln"
+    "apln": "bin/apln"
+  },
+  "directories": {
+    "doc": "./doc",
+    "spec": "./spec",
+    "lib": "./lib",
+    "bin": "./bin"
   },
   "author": "James Abdul",
   "license": "BSD",
   "gitHead": "82ecd3add51db4ad42a72062a6a22228c9d556e8",
   "readmeFilename": "README.md",
+  "bugs": {
+    "url" : "https://github.com/jabdul/apln/issues"
+  },
   "dependencies": {
-    "nopt": "~2.1.2",
     "lodash": "~2.4.0",
     "insight": "~0.3.0",
     "sudo-block": "~0.3.0",
     "async": "~0.2.9",
     "open": "0.0.4",
-    "chalk": "~0.3.0"
+    "chalk": "~0.3.0",
+    "optimist": "~0.6.0",
+    "prompt": "~0.2.12",
+    "replacestream": "0.0.6",
+    "fs.extra": "~1.2.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jasmine-node": "~1.11.0"
+  }
 }

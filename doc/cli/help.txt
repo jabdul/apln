@@ -1,0 +1,20 @@
+Usage: apln [commands] [options]
+
+Description:
+
+  apln - Appland's command-line tool.
+
+Commands:
+
+  create <module-name>   create a module
+  remove <module-name>   remove a module
+  build <module-name>    build module
+
+Options:
+
+  -h, --help        output usage information.
+  -v, --verbose     (default) display logs.
+  -q, --quiet       hide logging information.
+  -f, --force       force the application to continue the
+                    process regardless of warnings and handled errors.
+

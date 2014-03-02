@@ -1,2 +1,25 @@
 #!/usr/bin/env node
 'use strict';
+
+/**
+ * Module Dependencies
+ */
+var cli = require('../lib/cli'),
+    argv = require('optimist')
+            .options(
+              'v', {
+                alias: 'verbose'
+              },
+              'q', {
+                alias: 'quiet'
+              },
+              'h', {
+                alias: 'help'
+              },
+              'f', {
+                alias: 'force'
+              }
+            )
+            .argv;
+
+cli.argv(argv);
