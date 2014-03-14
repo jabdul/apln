@@ -41,6 +41,9 @@
   "bugs": {
     "url" : "https://github.com/jabdul/apln/issues"
   },
+  "engines" : {
+    "node" : ">=0.8.16"
+  },
   "dependencies": {
     "lodash": "~2.4.0",
     "insight": "~0.3.0",
