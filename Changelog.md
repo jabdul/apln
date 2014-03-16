@@ -1,5 +1,8 @@
 ## Changelog ##
 
+### 0.2.1 ###
+* Fixed issue with build process when cleaning up dist directory in AppLand to remove and replace with new updated files.
+
 ### 0.2.0 ###
 * This release now fully integrated with the [appland](http://appland.io/) project.
 * Added `create` command feature to enable scaffolding of a new module in Appland. For example:
