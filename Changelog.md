@@ -6,7 +6,7 @@
 	* `$ apln create my-app`
 * Added `remove` command feature to enable the deletion of a module in Appland. For example:
 	* `$ apln remove my-app`
-* Added `build` command. Concatenates your js and css files, optimizes js files, and copies your module files in dist directory. For example:
+* Added `build` command. Runs unit tests, concatenates your js and css files, optimizes js files, and copies your module files in dist directory. For example:
 	* `$ apln build my-app`
 
 ### 0.1.2 ###
