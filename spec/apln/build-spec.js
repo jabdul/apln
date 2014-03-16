@@ -39,4 +39,10 @@ describe('apln build command class', function(){
   it("has a default launcher browser url port", function() {
     expect(apln.Build.launchPort).toEqual(that.launchPort);
   });
+
+  it("cleans up distribution folder", function() {
+    spyOn(apln.Build, 'cleanDistDir');
+    apln.Build.cleanDistDir();
+    expect(apln.Build.cleanDistDir).toHaveBeenCalled();
+  });
 });
