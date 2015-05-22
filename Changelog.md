@@ -3,6 +3,7 @@
 ### 0.2.2 ###
 * Pointer to module test harness corrected.
 * Added bower files to module root directory. This enables module specific dependency configuration.
+* Skeleton build file `app.build.js` updated to fix known issue during `appland` module build process. See https://github.com/jabdul/apln/issues/3
 
 ### 0.2.1 ###
 * Fixed issue with build process when cleaning up dist directory in AppLand to remove and replace with new updated files.

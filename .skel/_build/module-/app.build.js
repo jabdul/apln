@@ -6,8 +6,8 @@
   keepBuildDir: false,                                   // Delete 'dir' before build
   optimize: "uglify",                                    // 'uglify','none'
   paths: {
-    'module-{MODULE-NAME}/common': '../dist/module-{MODULE-NAME}/common',
-    'module-{MODULE-NAME}/controller/index-controller': '../dist/module-{MODULE-NAME}/controller/index-controller'
+    'module-{MODULE-NAME}/common': 'module-{MODULE-NAME}/common',
+    'module-{MODULE-NAME}/controller/index-controller': 'module-{MODULE-NAME}/controller/index-controller'
   },
   pragmasOnSave: {
     //removes Handlebars.Parser code (used to compile template strings) set
