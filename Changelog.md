@@ -1,5 +1,9 @@
 ## Changelog ##
 
+### 0.2.2 ###
+* Pointer to module test harness corrected.
+* Added bower files to module root directory. This enables module specific dependency configuration.
+
 ### 0.2.1 ###
 * Fixed issue with build process when cleaning up dist directory in AppLand to remove and replace with new updated files.
 
